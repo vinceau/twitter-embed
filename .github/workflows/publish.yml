@@ -38,7 +38,7 @@ jobs:
           yarn install
       - name: Build and deploy
         run: |
-          CI=false yarn run build
+          yarn run build
         env:
           PUBLIC_URL: /twitter-embed
       - name: Publish
