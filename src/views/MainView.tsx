@@ -17,15 +17,5 @@ export const MainView: React.FC = () => {
     paramMap[key] = val;
   });
 
-  return (
-    <TwitterTimelineEmbed
-      sourceType="profile"
-      screenName={paramMap["screenName"]}
-      theme={paramMap["theme"]}
-      borderColor={paramMap["borderColor"]}
-      noHeader={paramMap["noHeader"]}
-      noFooter={paramMap["noFooter"]}
-      transparent={paramMap["transparent"]}
-    />
-  );
+  return <TwitterTimelineEmbed sourceType="profile" {...paramMap} />;
 };
